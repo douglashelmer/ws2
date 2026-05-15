@@ -4,12 +4,12 @@ const Carousel = lazy(() => import('./Carousel'))
 const Ticker   = lazy(() => import('./Ticker'))
 
 const PHRASES = [
-  'NANO BANANA + CLAUDE CODE + BLENDER 3D',
+  'USANDO NANO BANANA + CLAUDE CODE',
   'SEM GASTAR R$1 COM FERRAMENTAS',
-  'O NOVO FLUXO DE CRIAÇÃO 3D',
+  'COM O NOVO FLUXO 3D + IA',
+  'USANDO BLENDER 3D DO ZERO',
   'DO BRIEFING AO PACKSHOT EM MINUTOS',
-  '3D PROFISSIONAL COM FERRAMENTAS GRATUITAS',
-  'O FLUXO QUE O MERCADO AINDA NÃO CONHECE',
+  'COM FERRAMENTAS 100% GRATUITAS',
 ]
 
 function useTypewriter(phrases) {
@@ -94,8 +94,9 @@ export default function Hero() {
 
           <h1 className="hero-title">
             DO ZERO AO PROFISSIONAL —{' '}
-            <span className="orange">USANDO FERRAMENTAS</span>{' '}
-            100% GRATUITAS
+            <br />
+            <span className="orange">{barText}</span>
+            <span style={{ display: 'inline-block', width: 3, height: '0.75em', background: 'var(--orange)', marginLeft: 3, verticalAlign: 'middle', animation: 'cursor-blink .75s step-end infinite' }} />
           </h1>
 
           <p className="hero-sub" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, flexWrap: 'wrap' }}>
@@ -123,8 +124,8 @@ export default function Hero() {
                 background: 'linear-gradient(to right, #c8d400, #f97316, #ef4444)',
               }} />
             </div>
-            <div style={{ marginTop: 8, fontSize: '0.7rem', fontFamily: 'Chakra Petch, sans-serif', fontWeight: 700, letterSpacing: '.1em', color: 'rgba(255,255,255,.55)', textAlign: 'center', minHeight: '1em' }}>
-              {barText}<span style={{ display: 'inline-block', width: 2, height: '0.8em', background: 'rgba(255,255,255,.5)', marginLeft: 2, verticalAlign: 'middle', animation: 'cursor-blink .75s step-end infinite' }} />
+            <div style={{ marginTop: 8, fontSize: '0.7rem', fontFamily: 'Chakra Petch, sans-serif', fontWeight: 700, letterSpacing: '.1em', color: 'rgba(255,255,255,.55)', textAlign: 'center' }}>
+              97% DAS VAGAS PREENCHIDAS
             </div>
           </div>
 
