@@ -61,13 +61,24 @@ export default function Hero() {
             <a href="#preco" className="hero-cta-btn">GARANTIR MINHA VAGA AGORA <span className="hero-cta-icon">✦</span></a>
           </div>
 
-          <div style={{ marginTop: 12, fontSize: '0.85rem', opacity: 0.6 }}>
-            De R$497 por <strong className="orange">R$19</strong>
-          </div>
-
-          <div style={{ marginTop: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, fontSize: '0.8rem', color: '#00c851', fontWeight: 600 }}>
-            <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#00c851', display: 'inline-block' }} />
-            Apenas 7 vagas restantes — 97% DAS VAGAS PREENCHIDAS
+          {/* Progress bar */}
+          <div style={{ marginTop: 16, width: '100%', maxWidth: 400, marginLeft: 'auto', marginRight: 'auto' }}>
+            <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'center', gap: 6, marginBottom: 10, fontSize: '0.9rem' }}>
+              <span style={{ opacity: 0.5, textDecoration: 'line-through' }}>de R$497</span>
+              <span style={{ opacity: 0.7 }}>por apenas</span>
+              <strong className="orange" style={{ fontSize: '1.1rem' }}>R$19</strong>
+            </div>
+            <div style={{ height: 14, borderRadius: 999, overflow: 'hidden', background: 'rgba(255,255,255,.1)' }}>
+              <div style={{
+                height: '100%',
+                width: '97%',
+                borderRadius: 999,
+                background: 'linear-gradient(to right, #c8d400, #f97316, #ef4444)',
+              }} />
+            </div>
+            <div style={{ marginTop: 8, fontSize: '0.7rem', fontFamily: 'Chakra Petch, sans-serif', fontWeight: 700, letterSpacing: '.1em', color: 'rgba(255,255,255,.55)', textAlign: 'center' }}>
+              97% DAS VAGAS DO LOTE 1 PREENCHIDAS
+            </div>
           </div>
 
         </div>
