@@ -1,12 +1,11 @@
 import { useReveal } from '../hooks/useReveal'
 
-const CTA = 'https://pay.onprofit.com.br/CjKXd5Oo?off=bNgTEM'
+const CTA = 'https://pay.onprofit.com.br/vM8DxayZ?off=PDtgMr&utm_source=organic'
 
 const ITEMS = [
-  'Acesso Vitalício',
-  '+20h de conteúdo direto ao ponto',
-  'Suporte da comunidade exclusiva',
-  'Certificado de conclusão',
+  'Acesso ao vivo no dia do workshop',
+  'Suporte no chat durante o evento ao vivo',
+  'Materiais, arquivos de projeto e recursos',
   'Garantia de 7 dias',
 ]
 
@@ -17,16 +16,13 @@ export default function Price() {
   return (
     <section className="sec price-sec" id="preco">
 
-      {/* Cabeçalho */}
-      <h2 className="sec-title price-sec-title">Invista no futuro<br />da sua carreira</h2>
+      <h2 className="sec-title price-sec-title">Invista no seu<br />próximo nível</h2>
       <p className="sec-eyebrow price-sec-sub">
-        Domine o workflow 3D + IA e multiplique seus resultados em tempo recorde
+        1 dia ao vivo para dominar o fluxo que muda sua carreira
       </p>
 
-      {/* Colunas */}
       <div className="price-cols">
 
-        {/* ── Esquerda: Comparação de tempo ── */}
         <div className="price-compare reveal" ref={leftRef}>
           <div className="pc-head">
             <span className="pc-head-icon" aria-hidden="true">
@@ -41,54 +37,49 @@ export default function Price() {
           </div>
 
           <div className="pc-bars">
-            {/* Barra Tradicional */}
             <div className="pc-bar-row">
               <div className="pc-bar-meta">
                 <span className="pc-bar-label">Fluxo Tradicional</span>
-                <span className="pc-bar-hours pc-bar-hours--red">23H</span>
+                <span className="pc-bar-hours pc-bar-hours--red">4 DIAS</span>
               </div>
               <div className="pc-bar-track">
                 <div className="pc-bar pc-bar--red" style={{ width: '100%' }} />
               </div>
             </div>
 
-            {/* Divisor ⚡ */}
             <div className="pc-lightning" aria-hidden="true">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                 <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
               </svg>
             </div>
 
-            {/* Barra 3D + IA */}
             <div className="pc-bar-row">
               <div className="pc-bar-meta">
                 <span className="pc-bar-label">Fluxo 3D + IA</span>
-                <span className="pc-bar-hours pc-bar-hours--orange">2H</span>
+                <span className="pc-bar-hours pc-bar-hours--orange">13 MIN</span>
               </div>
               <div className="pc-bar-track">
-                <div className="pc-bar pc-bar--orange" style={{ width: '9%' }} />
+                <div className="pc-bar pc-bar--orange" style={{ width: '1%' }} />
               </div>
             </div>
           </div>
 
           <div className="pc-footer">
-            Entregue projetos <strong>91% mais rápido</strong>
+            Entregue projetos <strong>99% mais rápido</strong>
           </div>
         </div>
 
-        {/* ── Direita: Card de preço ── */}
         <div className="price-card reveal" ref={rightRef}>
-          <div className="pcard-badge">75% OFF</div>
+          <div className="pcard-badge">93% OFF</div>
 
-          <div className="pcard-formacao">Formação</div>
-          <div className="pcard-logo">
-            <span className="pcard-ia">IA</span><span className="pcard-pro">PRO</span><span className="pcard-dot">.</span><span className="pcard-blend">BLEND</span>
+          <div className="pcard-formacao">Workshop ao Vivo</div>
+          <div className="pcard-logo" style={{ fontSize: '1.4rem', letterSpacing: '.05em' }}>
+            3D + IA EM 1 DIA
           </div>
 
-          <p className="pcard-de">De R$ 2.997</p>
-          <p className="pcard-por">Por apenas 12x de</p>
-          <div className="pcard-price"><sup>R$</sup>69<span className="pcard-cents">,73</span></div>
-          <p className="pcard-vista">ou R$697 à vista</p>
+          <p className="pcard-de">De R$ 297</p>
+          <p className="pcard-por">Por apenas</p>
+          <div className="pcard-price"><sup>R$</sup>19</div>
 
           <ul className="pcard-list">
             {ITEMS.map(i => (

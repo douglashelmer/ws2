@@ -7,7 +7,6 @@ export default function Hero() {
   const videoRef = useRef(null)
 
   useEffect(() => {
-    // Só carrega o vídeo em desktop — evita download de 7MB no mobile
     if (window.innerWidth > 768 && videoRef.current) {
       videoRef.current.src = '/images/video-hero.mp4'
       videoRef.current.load()
@@ -18,7 +17,6 @@ export default function Hero() {
     <section className="hero">
       <div className="hero-canvas-wrap">
 
-        {/* Vídeo de fundo — desktop (src definido via JS para não baixar no mobile) */}
         <video
           ref={videoRef}
           id="hero-canvas"
@@ -31,7 +29,6 @@ export default function Hero() {
           aria-hidden="true"
         />
 
-        {/* Imagem de fundo — mobile */}
         <img
           id="hero-canvas-mob"
           className="hero-video-mob"
@@ -43,34 +40,43 @@ export default function Hero() {
 
         <div className="hero-overlay">
 
-          {/* Badge */}
           <div className="hero-badge">
             <span className="hero-badge-icon" aria-hidden="true">🪐</span>
-            O Futuro da criação já começou
+            3D + NANO BANANA + CLAUDE CODE: O NOVO FLUXO PARA CRIAR PROJETOS 3D EM MINUTOS SEM GASTAR 1 REAL
           </div>
 
-          {/* Headline */}
           <h1 className="hero-title">
-            <span className="orange">3D + NANO BANANA + CLAUDE CODE:</span> O NOVO FLUXO PARA CRIAR{' '}
-            <span className="orange">PROJETOS 3D DE 15K</span> EM MINUTOS SEM GASTAR 1 REAL
+            DO ZERO AO PROFISSIONAL —{' '}
+            <span className="orange">USANDO FERRAMENTAS</span>{' '}
+            100% GRATUITAS
           </h1>
 
-          {/* Sub */}
-          <p className="hero-sub">DO ZERO AO PROFISSIONAL – USANDO FERRAMENTAS 100% GRATUITAS</p>
+          <p className="hero-sub" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, flexWrap: 'wrap' }}>
+            <span>16 de Maio</span>
+            <span style={{ opacity: 0.4 }}>·</span>
+            <span>Online e ao Vivo no Zoom</span>
+          </p>
 
-          {/* CTA */}
           <div className="hero-btns">
             <a href="#preco" className="hero-cta-btn">GARANTIR MINHA VAGA AGORA <span className="hero-cta-icon">✦</span></a>
           </div>
 
+          <div style={{ marginTop: 12, fontSize: '0.85rem', opacity: 0.6 }}>
+            De R$497 por <strong className="orange">R$19</strong>
+          </div>
+
+          <div style={{ marginTop: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, fontSize: '0.8rem', color: '#00c851', fontWeight: 600 }}>
+            <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#00c851', display: 'inline-block' }} />
+            Apenas 7 vagas restantes — 97% DAS VAGAS PREENCHIDAS
+          </div>
+
         </div>
 
-        {/* Stats */}
-        <div className="hero-stats" role="list" aria-label="Métricas do curso">
+        <div className="hero-stats" role="list" aria-label="Métricas do workshop">
           {[
+            { num: '1',    label: 'Dia ao Vivo' },
             { num: '90%',  label: 'Menos Tempo' },
-            { num: '10X',  label: 'Mais Produtivo' },
-            { num: '100%', label: 'Consistente' },
+            { num: 'R$19', label: 'Investimento' },
           ].map(s => (
             <div className="hero-stat" key={s.label} role="listitem">
               <div className="hero-stat-num">{s.num}</div>

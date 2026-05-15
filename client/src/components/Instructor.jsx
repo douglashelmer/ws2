@@ -1,6 +1,6 @@
 import { useReveal } from '../hooks/useReveal'
 
-const CTA = 'https://pay.onprofit.com.br/CjKXd5Oo?off=bNgTEM'
+const CTA = 'https://pay.onprofit.com.br/vM8DxayZ?off=PDtgMr&utm_source=organic'
 
 export default function Instructor() {
   const eyebrowRef = useReveal()
@@ -23,7 +23,7 @@ export default function Instructor() {
           <img
             className="inst-photo"
             src="/images/instructor-douglas.webp"
-            alt="Douglas Helmer — instrutor IAPRO.BLEND"
+            alt="Douglas Helmer — instrutor Workshop 3D + IA"
             loading="lazy"
           />
           <div className="inst-stats" style={{ marginTop: 16 }}>

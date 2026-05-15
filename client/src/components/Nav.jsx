@@ -14,10 +14,9 @@ export default function Nav() {
       <a href="#main" className="skip-link">Ir para o conteúdo</a>
       <nav className={scrolled ? 'scrolled' : ''}>
         <div className="logo">
-          <span className="nav-formacao">FORMAÇÃO</span>
-          <div className="nav-logo-row">
-            <span className="ia">IA</span><span className="pro">PRO</span><span className="dot">.</span><span className="blend">BLEND</span>
-          </div>
+          <span className="nav-logo-row" style={{ fontFamily: 'var(--font-chakra, Chakra Petch, sans-serif)', fontSize: '1.1rem', letterSpacing: '.08em' }}>
+            WORKSHOP <span className="orange">3D + IA</span>
+          </span>
         </div>
         <a href="#preco" className="nav-pill">Garantir vaga →</a>
       </nav>

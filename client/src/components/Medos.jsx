@@ -3,33 +3,33 @@ import { useReveal } from '../hooks/useReveal'
 const MEDOS = [
   {
     n: '01',
-    titulo: '"Eu não sou artista."',
-    crenca: '"Preciso saber desenhar, entender de luz, ter bagagem de belas artes antes de mexer em 3D."',
-    realidade: '3D comercial hoje é 80% execução técnica e 20% gosto visual. A IA cobre parte da composição — você opera o fluxo, o cliente paga pelo entregável, não pelo talento.',
+    titulo: '"Não sei nada de 3D."',
+    crenca: '"Nunca abri o Blender. Vou me perder nas primeiras horas do workshop."',
+    realidade: 'O workshop começa do zero absoluto. Em 2 horas você já tem um produto 3D na tela. O fluxo com IA cobre a parte técnica — você foca no resultado.',
   },
   {
     n: '02',
-    titulo: '"É caro e complexo demais."',
-    crenca: '"Preciso de PC top, Cinema 4D, Redshift, licença de mil coisas. Sem isso nem começo."',
-    realidade: 'Blender é gratuito e open source. Nano Banana gera imagens dentro do fluxo. Claude controla as ferramentas pra você. Roda em notebook intermediário.',
+    titulo: '"Meu computador não aguenta."',
+    crenca: '"Preciso de um PC top de linha para rodar Blender e IA. Sem isso nem começo."',
+    realidade: 'Blender roda em qualquer notebook intermediário. A renderização é feita via IA na nuvem. Sem instalação pesada, sem travar.',
   },
   {
     n: '03',
-    titulo: '"A IA vai me substituir."',
-    crenca: '"Se a IA já faz imagem sozinha, o cliente não vai mais precisar de mim."',
-    realidade: 'IA pura não entrega consistência: rótulo muda, forma muda, cor muda. Marca não aceita isso. 3D+IA é o único fluxo que garante 99% de fidelidade — e quem domina cobra por isso.',
+    titulo: '"1 dia é muito pouco."',
+    crenca: '"Aprender 3D + IA em 1 dia é impossível. Vou sair sem saber nada."',
+    realidade: 'O workshop é focado no fluxo que funciona hoje. Em 1 dia você sai com produto 3D criado, packshot gerado e portfólio para mostrar ao cliente.',
   },
   {
     n: '04',
-    titulo: '"Comecei tarde demais."',
-    crenca: '"Tem gente fazendo 3D desde os 15 anos. Não dá mais pra me encaixar."',
-    realidade: 'A IA zerou a largada. Em 2 dias de workshop você sai com o mesmo fluxo que um artista de 10 anos leva semanas pra montar. Cliente não pergunta sua idade — pergunta prazo.',
+    titulo: '"A IA vai me substituir."',
+    crenca: '"Se a IA já faz imagem sozinha, não precisam mais de mim."',
+    realidade: 'IA pura não entrega consistência de marca. 3D+IA é o único fluxo com 99% de fidelidade. Quem domina isso cobra mais, não menos.',
   },
   {
     n: '05',
-    titulo: '"E se eu não conseguir cliente?"',
-    crenca: '"Aprendo, monto portfólio, e depois? De onde vem o primeiro trabalho?"',
-    realidade: 'Marcas pequenas no Instagram via DM direto. Agências locais precisam de freelancer fixo. Fiverr / Workana para estrangeiro em USD. Portfólio IA-nativo já te separa dos 95%.',
+    titulo: '"R$19 parece barato demais."',
+    crenca: '"Se é barato assim, deve ser conteúdo raso sem valor real."',
+    realidade: 'É uma estratégia de acesso. O conteúdo é o mesmo fluxo profissional que geramos resultados de R$15k de projeto. Você vai entender o porquê ao vivo.',
   },
 ]
 
@@ -40,8 +40,8 @@ export default function Medos() {
 
   return (
     <section className="sec">
-      <div className="sec-eyebrow reveal" ref={eyebrowRef}>O que trava quem começa</div>
-      <h2 className="sec-title reveal" ref={titleRef}>Os 5&nbsp;medos de quem<br />ainda não começou.</h2>
+      <div className="sec-eyebrow reveal" ref={eyebrowRef}>O que trava quem ainda não decidiu</div>
+      <h2 className="sec-title reveal" ref={titleRef}>Os 5 medos de quem<br />ainda não clicou.</h2>
       <div className="medos-grid reveal" ref={gridRef}>
         {MEDOS.map(m => (
           <div className="medo-card" key={m.n}>

@@ -2,39 +2,32 @@ import { useReveal } from '../hooks/useReveal'
 
 const MODS = [
   {
-    img: '/images/module-ia-conceito.jpg',
-    eyebrow: 'Etapa 1 do fluxo: Conceito e Visual',
-    title: 'IA para o Conceito',
-    desc: 'Aceleração criativa e geração de ativos mestres — rótulos, visuais e direção de arte em horas com agentes de IA.',
-    badge: '→ Etapa 1',
+    img: '/images/module-iapro.webp',
+    eyebrow: 'BLOCO 1 — DIA 1',
+    title: 'Conceito com IA',
+    desc: 'Do briefing ao visual completo em minutos. Claude gera nome, paleta de cores, direção de arte e rótulo sem você abrir o Illustrator.',
+    badge: '→ CLAUDE IA',
   },
   {
     img: '/images/HikBCU6skVoY2KNgjojuKIXeH4.webp',
-    eyebrow: 'Etapa 2 do fluxo: Modelagem 3D',
-    title: 'Blender PRO',
-    desc: 'Modelagem do produto, aplicação de rótulos vetorizados e criação do Produto 3D Mestre — base consistente para toda campanha.',
-    badge: '→ Etapa 2',
+    eyebrow: 'BLOCO 2 — DIA 1',
+    title: 'Blender 3D do Zero',
+    desc: 'Modelagem do produto, aplicação de rótulos e criação do produto 3D mestre — a base consistente para toda campanha.',
+    badge: '→ BLENDER',
   },
   {
     img: '/images/DroToGdSZcZsGneYv9FaDkk9E2I.webp',
-    eyebrow: 'Exclusivo do fluxo IAPRO.BLEND',
-    title: 'A Ponte 3D–IA',
-    desc: 'O módulo exclusivo: como usar o render do Blender como base controlada para a IA amplificar com fotorrealismo absoluto.',
-    badge: '→ Exclusivo',
+    eyebrow: 'BLOCO 3 — DIA 2',
+    title: 'A Ponte 3D → IA',
+    desc: 'O módulo exclusivo: como usar o render do Blender como base controlada para a IA gerar fotorrealismo absoluto.',
+    badge: '→ EXCLUSIVO',
   },
   {
     img: '/images/UQTVDjpNTmOONz0YxNzEMDAPDH8.webp',
-    eyebrow: 'Etapa 3 do fluxo: Multiplicação',
-    title: '10x Mais Resultados',
-    desc: 'Packshots, cenários e animações em 1/10 do tempo — com o produto 3D consistente como base imutável.',
-    badge: '→ Etapa 3',
-  },
-  {
-    img: '/images/DCaalfQRT2fZn5gcYZM8WLyEFqU.webp',
-    eyebrow: 'Resultado final e carreira',
-    title: 'Profissional do Futuro',
-    desc: 'Finalização, monetização e entrega de campanha. Freela, precificação e posicionamento com o novo workflow.',
-    badge: '→ Carreira',
+    eyebrow: 'BLOCO 4 — DIA 2',
+    title: 'Packshots e Portfólio',
+    desc: 'Variações ilimitadas de cenário, luz e ambientação. Entrega profissional e precificação do seu trabalho.',
+    badge: '→ RESULTADO',
   },
 ]
 
@@ -45,8 +38,8 @@ export default function Modules() {
 
   return (
     <section className="sec sec-alt" id="fluxo">
-      <div className="sec-eyebrow reveal" ref={eyebrowRef}>O caminho completo 3D + IA</div>
-      <h2 className="sec-title reveal" ref={titleRef}>Módulos estratégicos<br />que transformam carreiras.</h2>
+      <div className="sec-eyebrow reveal" ref={eyebrowRef}>O que você aprende no workshop</div>
+      <h2 className="sec-title reveal" ref={titleRef}>Conteúdo direto ao ponto<br />em 4 blocos práticos.</h2>
       <div className="modules-list reveal" ref={listRef}>
         {MODS.map(m => (
           <div className="mod-row" key={m.title}>
