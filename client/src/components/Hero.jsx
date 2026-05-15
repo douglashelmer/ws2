@@ -1,10 +1,57 @@
-import { useRef, useEffect, lazy, Suspense } from 'react'
+import { useRef, useEffect, useState, lazy, Suspense } from 'react'
 
 const Carousel = lazy(() => import('./Carousel'))
 const Ticker   = lazy(() => import('./Ticker'))
 
+const PHRASES = [
+  '97% DAS VAGAS PREENCHIDAS',
+  'APENAS 3 VAGAS DISPONÍVEIS',
+  'WORKSHOP ACONTECE DIA 16 DE MAIO',
+  'MAIS DE 200 ALUNOS CONFIRMADOS',
+  'VAGAS ESGOTANDO — GARANTA A SUA',
+  'ACESSO ENCERRA ANTES DA MEIA-NOITE',
+]
+
+function useTypewriter(phrases) {
+  const [text, setText] = useState(phrases[0])
+  const state = useRef({ phrase: 0, char: phrases[0].length, deleting: false })
+  const timer = useRef(null)
+
+  useEffect(() => {
+    const tick = () => {
+      const s = state.current
+      const current = phrases[s.phrase]
+      if (!s.deleting) {
+        if (s.char < current.length) {
+          s.char++
+          setText(current.slice(0, s.char))
+          timer.current = setTimeout(tick, 45 + Math.random() * 30)
+        } else {
+          s.deleting = true
+          timer.current = setTimeout(tick, 2200)
+        }
+      } else {
+        if (s.char > 0) {
+          s.char--
+          setText(current.slice(0, s.char))
+          timer.current = setTimeout(tick, 22 + Math.random() * 15)
+        } else {
+          s.deleting = false
+          s.phrase = (s.phrase + 1) % phrases.length
+          timer.current = setTimeout(tick, 300)
+        }
+      }
+    }
+    timer.current = setTimeout(tick, 1800)
+    return () => clearTimeout(timer.current)
+  }, [phrases])
+
+  return text
+}
+
 export default function Hero() {
   const videoRef = useRef(null)
+  const barText = useTypewriter(PHRASES)
 
   useEffect(() => {
     if (window.innerWidth > 768 && videoRef.current) {
@@ -76,8 +123,8 @@ export default function Hero() {
                 background: 'linear-gradient(to right, #c8d400, #f97316, #ef4444)',
               }} />
             </div>
-            <div style={{ marginTop: 8, fontSize: '0.7rem', fontFamily: 'Chakra Petch, sans-serif', fontWeight: 700, letterSpacing: '.1em', color: 'rgba(255,255,255,.55)', textAlign: 'center' }}>
-              97% DAS VAGAS DO LOTE 1 PREENCHIDAS
+            <div style={{ marginTop: 8, fontSize: '0.7rem', fontFamily: 'Chakra Petch, sans-serif', fontWeight: 700, letterSpacing: '.1em', color: 'rgba(255,255,255,.55)', textAlign: 'center', minHeight: '1em' }}>
+              {barText}<span style={{ display: 'inline-block', width: 2, height: '0.8em', background: 'rgba(255,255,255,.5)', marginLeft: 2, verticalAlign: 'middle', animation: 'cursor-blink .75s step-end infinite' }} />
             </div>
           </div>
 
